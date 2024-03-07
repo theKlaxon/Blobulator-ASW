@@ -4,14 +4,21 @@ These header files allow for the use of the Blobulator in the Alien Swarm SDK.
 
 # How to:
 
-Setup NPC_Surface Demo:
+Setup Paintblob Example Code:
 
 	- Pull this repo, and drop the files on top of your current SDK. Doing this should add the "blobulator" folder your SDK's copy of "src/common/", 
-		and the "src/game/client/ep3" + "src/game/server/ep3" (containing npc_surface) folders to your "src/game" folders
+		and the "src/game/client/emulsion" + "src/game/server/emulsion" + "src/game/shared/emulsion" (containing paintblob streams) folders to your "src/game" folders
 	
-	- Once you have added these files into your SDK, you can add "src/game/client/c_npc_surface.cpp" to your client project, and "src/game/server/npc_surface.cpp" + "src/game/server/npc_surface.h" to your server project. 
+	- Once you have added these files into your SDK, add the following files to your project:
+		-Client
+			-client/emulsion/c_paintblob_stream.cpp / .h
+			-shared/emulsion/paintblob_manager.cpp / .h
+		
+		-Server
+			-server/emulsion/paintblob_stream.cpp / .h
+			-shared/emulsion/paintblob_manager.cpp / .h
 	
-	- Next, compile the project and you should be able to interact with npc_surface in any map compiled with the "npc_surface" entity. ( one is included in this repo's game files. )
+	- Finally, you should be able to use the paintblob managers to spawn blobs using something like a paintgun weapon. One will be added soon for Demo purposes.
 
 
 Setup custom implmentation of Blobulator:
